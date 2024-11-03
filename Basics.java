@@ -1,5 +1,37 @@
 import java.util.Scanner;
 
+//Inheritence
+
+//Base class:
+class Vehicle {
+
+    public String numberOfVehicle;
+
+    public Vehicle(String numberOfVehicle) {
+        this.numberOfVehicle = numberOfVehicle;
+        System.out.println(numberOfVehicle);
+    }
+
+    public void printVehicleNumber() {
+        System.out.println(numberOfVehicle);
+    }
+
+}
+
+// Derived class:
+class Car extends Vehicle {
+    public Car(String numberOfcar) {
+        super(numberOfcar);
+    }
+}
+
+// Derived class:
+class Bus extends Vehicle {
+    public Bus(String numberOfBus) {
+        super(numberOfBus);
+    }
+}
+
 class Test {
     // constructor
 
@@ -47,6 +79,12 @@ public class Basics {
         Test test = new Test(500);
         test.checkBal(2000, "123");
         test.printBalance();
+        // object for inheritance:
+
+        Car car = new Car("KA12A0006");
+        Bus bus = new Bus("KA12F2222");
+        bus.printVehicleNumber();
+        car.printVehicleNumber();
     }
 
 }
